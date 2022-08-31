@@ -1,0 +1,176 @@
+
+body{
+    background-color: #d4ced0;
+}
+.content    
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 60px 20px;
+    width: 400px;
+    border: 1px solid #00baff;
+    border-radius: 40px;
+    transform: translate(-50%,-50%);
+    background: #fce4ec;
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+.header
+{
+    margin-top: -40px;
+    color: black;
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.h4
+{
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+
+}
+
+.imgcontainer 
+{
+    text-align: center;
+    margin: 20px 0 12px 0;
+}
+
+img.avatar 
+{
+    width: 40%;
+    border-radius: 60%;
+}
+
+
+.psw,
+.email
+{
+    height: 40px;
+    width: 95%;
+    margin-top: 25px;
+}
+
+.psw input,
+.email input
+{
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid  #00baff;
+    border-radius: 25px;
+}
+
+.login input[type="submit"]
+{
+    height: 40px;
+    width: 75%;
+    background:white;
+    border: 1px solid #00baff;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.login input[type="submit"]:hover{
+    background:black;
+    color: white;
+}
+
+.pass
+{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: space-around;
+}
+
+.Sign_In
+{
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: -30px;
+}
+
+form .pass-link a,
+.Sign_In a
+{
+    text-decoration: none;
+    color: #00baff;
+}
+
+form .pass-link a:hover,
+.Sign_In a:hover
+{
+    text-decoration: underline;
+}
+
+
+:root
+{
+    --white: #f0f0f0;
+    --black: #202a32;
+    --bg: var(--white);
+    --txt: var(--black);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mode
+{
+    background-color: var(--bg);
+    min-height: 100vh;
+    transition: background 0.9s ease;
+}
+
+.c_box
+{
+    display: none;
+}
+
+.l_label
+{
+    display: flex;
+    background: var(--txt);
+    border-radius: 5rem;
+    height: 1.5rem;
+    width: 3rem;
+}
+
+.l_label .ball
+{
+    position: absolute;
+    background-color: var(--bg);
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    height: 1rem;
+    width: 1rem;
+    transition: transform 0.9s ease
+}
+
+.navbar{
+    margin-top: 1.5%;
+    margin-left: 8%;
+}
+

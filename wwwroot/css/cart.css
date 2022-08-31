@@ -1,0 +1,32 @@
+.item{
+    box-shadow: 1px 3px 2px gray;
+    height: 300px;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 30px;
+}
+.img-box {
+    background-color: rgb(247, 247, 247);
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+  }
+
+.row {
+    display: flex;
+    /* background-color:green; */
+    flex-direction: column;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+.quantity{
+    text-align: right;
+}
+.totalprice{
+    text-align: right;
+    margin-right: 10%;
+}

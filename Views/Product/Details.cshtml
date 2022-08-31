@@ -1,0 +1,59 @@
+﻿@model Final_Project.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+    Layout="_AdminLayout";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+  <section class="product_section layout_padding">
+            
+               <div class="heading_container" style="align-items: center;">
+                  <h2>
+                     Our <span>products</span>
+                  </h2>
+               </div>  
+               <div class="row">
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                     <div class="box">
+                        <div class="">
+                           
+                        </div>
+                        <div  class="detail-box">
+                            <h5  id="title1" >
+                                @Model.Name
+                            </h5>
+                            <h6 id="price1">
+                               @Model.Price
+                            </h6>
+                         </div>
+                        <div class="img-box">
+                           <img  id="img1"src="~/Images/@Model.Image" alt="">
+                        </div>
+        
+                        
+                     </div>
+
+
+                  </div>            
+                  </div>
+                  <div class="btn-box">
+                     <a href="#" onclick="Getdata()">
+                        More products
+                     </a>
+                  </div>
+         </section>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="AdminView">Back to List</a>
+</div>
+
+                           
+@section Scripts {
+      <script src="/js/product.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

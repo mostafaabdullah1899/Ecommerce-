@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Final_Project.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout="_AdminLayout";
+}
+<div class="row">
+<h1 class="text-center" style="font-size:xxx-large !important;font-weight: bolder; color:#1F2937;">Orders</h1>
+</div>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shipped_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Price)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Customer.UserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shipped_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.UserName)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

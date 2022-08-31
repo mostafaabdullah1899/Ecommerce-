@@ -1,0 +1,199 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+            <!-- slider section -->
+            <section class="slider_section ">
+               <div class="slider_bg_box">
+                  <img src="images/slider-bg.jpg" alt="">
+               </div>
+               <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="container ">
+                           <div class="row">
+                              <div class="col-md-7 col-lg-6 ">
+                                 <div class="detail-box">
+                                    <h1>
+                                       <span>
+                                       Sale 20% Off
+                                       </span>
+                                       <br>
+                                       On Everything
+                                    </h1>
+                                    <p>
+                                       Extra 20% Off Up To 400$ <br>Use code: <span style="color: #F7444E;font-family: Monsorat;font-size:large;font-weight: bolder;">EXTRA20</span> 
+                                    </p>
+                                    <div class="btn-box">
+                                       <a asp-action="Index" asp-controller="Product" class="btn1">
+                                       Shop Now
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item ">
+                        <div class="container ">
+                           <div class="row">
+                              <div class="col-md-7 col-lg-6 ">
+                                 <div class="detail-box">
+                                    <h1>
+                                       <span>
+                                       FREE Delivery 
+                                       </span>
+                                       <br>
+                                       On First Order
+                                    </h1>
+                                    <p>
+                                       Free Delivery on First Order is a limited offer only. This offer can be extended/terminated 
+
+                                    </p>
+                                    <div class="btn-box">
+                                       <a asp-action="Index" asp-controller="Product" class="btn1">
+                                       Shop Now
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <ol class="carousel-indicators">
+                        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#customCarousel1" data-slide-to="1"></li>
+                     </ol>
+                  </div>
+               </div>
+            </section>
+            <!-- end slider section -->
+
+   <!-- product section -->
+   <partial name="Product" />
+   <!-- end product section -->
+
+  <!-- subscribe section -->
+      <section class="subscribe_section">
+         <div class="container-fuild">
+            <div class="box">
+               <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                     <div class="subscribe_form ">
+                        <div class="heading_container heading_center">
+                           <h3>Subscribe To Get Discount Offers</h3>
+                        </div>
+                        <form >
+                           <input type="email" placeholder="Enter your email" required>
+                           <button>
+                           subscribe
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end subscribe section -->
+      <!-- client section -->
+      <section class="client_section layout_padding">
+         <div class="container">
+            <div class="heading_container heading_center">
+               <h2>
+                  Customer's Testimonial
+               </h2>
+            </div>
+            <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="images/client.jpg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Anna Trevor
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              I love this site, I buy all my clothes from it.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="images/client2.png" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Moray Meriwether
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              What I love about this site is always distinguished and it has the latest styles.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="images/client3.jpg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Nefes Efthalia
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              The best brands are always available.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel_btn_box">
+                  <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
+                  <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
+                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end client section -->
+      @section Scripts {
+
+    <script src="/js/home.js"></script>
+  <script src="/js/product.js"></script>
+}
+
+  

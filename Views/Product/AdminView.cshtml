@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Final_Project.Models.Product>
+
+@{
+    ViewData["Title"] = "AdminView";
+    Layout="_AdminLayout";
+
+}
+
+
+<div class="row">
+<h1 class="text-center" style="font-size:xxx-large !important;font-weight: bolder; color:#1F2937;">Products</h1>
+<br />
+<p class="text-end">
+    <a  class="btn btn-dark" asp-action="New">Add New Product</a>
+</p>
+</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <img style="width:50px;!important" src="~/Images/@item.Image">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a  class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a  class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

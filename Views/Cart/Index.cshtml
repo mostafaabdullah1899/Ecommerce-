@@ -1,0 +1,101 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <!-- product section -->
+    
+ <section class="product_section layout_padding">
+    @if (Model.Count()!=0)
+    {
+        <div class="heading_container" style="align-items: center;">
+            <h2>
+                Cart <span>Items</span>
+            </h2>
+        </div>  
+        <div class="row">
+            @foreach (Product item in @Model)
+            {
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="box">
+                        <div class="">
+
+                        </div>
+                        <div  class="detail-box">
+                            <h5  id="title1" >
+                                @item.Name
+                            </h5>
+                            <h6 id="price1">
+                               $ @item.Price
+                            </h6>
+                        </div>
+                        <div class="img-box">
+                            <img  id="img1"src="images/@item.Image" alt="">
+                        </div>
+                @*        <div class="option_container">
+                            <div class="options">
+        
+                             <a class="option1" value="1" onclick="addProductToCart(@item.Id)">
+                               <i class="fa fa-trash" style="color:#c82333;" aria-hidden="true"></i>
+
+                                 </a>
+     
+                            </div>
+                          
+                        </div>*@
+                    </div>
+
+
+                </div>
+            }               
+        </div>
+}
+else
+{
+    <div class="heading_container" style="align-items: center;">
+            <h2>
+                Empty <span>Cart</span>
+            </h2>
+                       <img src="Images/emptycart.svg" style="width:50%;"/>       
+
+        </div>  
+}
+                  @if (Model.Count()!=0)
+    {
+        <div style="text-align:center;margin:5%;">
+        <div style="display:inline;">
+        @if(@User.Identity.IsAuthenticated==true){
+            <a class="btn btn-lg btn-danger"  asp-action="New" asp-Controller="Order">
+                Check Out
+               </a>
+               } 
+            else
+                    {
+                         <a class="btn btn-lg btn-danger"  asp-action="Login" asp-Controller="Account">
+                Check Out
+                    </a>
+                    }
+            </div>
+        <div style="display:inline;">
+            <a class="btn btn-lg btn-outline-danger" asp-action="EmptyCart" asp-Controller="Product">
+                Empty Cart
+            </a>
+
+        </div>
+        </div>
+    }
+    else{
+
+                  <div class="btn-box">
+                    
+                      <a asp-action="Index" asp-Controller="Product">
+                        Shop Now
+                     </a>
+                    
+                  </div>
+                  }
+    </section>
+
+<!-- end product section -->
+    <script src="/js/cart.js"></script>

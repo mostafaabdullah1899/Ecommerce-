@@ -1,0 +1,50 @@
+﻿ <header class="header_section">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="home"><img width="250" src="~/images/logo.png" alt="#" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" asp-action="Index" asp-controller="Home">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a asp-action="Index" asp-controller="About">About</a></li>
+                        @if(@User.Identity.IsAuthenticated==false)
+                        {
+                        <li><a asp-action="Login"asp-controller="Account">Login</a></li>
+                        <li><a asp-action="Register"asp-controller="Account">Register</a></li>
+                        }
+                        else{
+                        <li><a asp-action="Index"asp-controller="Order">Orders</a></li>
+                        <li><a asp-action="Logout"asp-controller="Account">Logout</a></li>
+                        }
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" asp-action="Index" asp-controller="Product">Products</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" asp-action="Index" asp-controller="Contact">Contact</a>
+                  </li>
+
+                    <li class="nav-item">
+                     <a class="nav-link" href="cart">
+                       <i class="fa" style="font-size:24px">&#xf07a;</i>
+                       <span class='badge badge-primary' id='lblCartCount'></span>
+                     </a>
+                  </li>
+                    @if(@User.Identity.IsAuthenticated==true)
+                    {
+                      <li class="nav-item"><a class="nav-link">Welcome @User.Identity.Name </a></li>
+
+                    }
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </header>

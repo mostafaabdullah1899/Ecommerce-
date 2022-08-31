@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Final_Project.Models.Customer>
+
+@{
+    ViewData["Title"] = "AdminView";
+    Layout="_AdminLayout";
+
+}
+
+<div class="row">
+<h1 class="text-center" style="font-size:xxx-large !important;font-weight: bolder; color:#1F2937;">Customers</h1>
+<br />
+<p class="text-end">
+    <a class="btn btn-dark" asp-action="New" asp-controller="Customer"> New Customer</a>
+</p>
+</div>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+           
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            
+           
+           
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+           
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+           
+            
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            
+            <td>
+                <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a  class="btn btn-danger" asp-action="Delete" asp-controller="Customer" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

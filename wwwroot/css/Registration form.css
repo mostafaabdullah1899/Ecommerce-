@@ -1,0 +1,229 @@
+body {
+    background-color: #d4ced0;
+}
+
+.content    
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 60px 25px;
+    width: 400px;
+    border: 1px solid #00baff;
+    border-radius: 40px;
+    transform: translate(-50%,-50%);
+    background: #fce4ec;
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+.header
+{
+    margin-top: -50px;
+    color: black;
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.header4
+{
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.psw,
+.user_name,
+.your_name,
+.email,
+.bith_of_date
+{
+    height: 40px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.your_name input,.email input,.psw input,
+.bith_of_date input,.user_name input
+{
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid  #00baff;
+    border-radius: 25px;
+}
+
+#l_message,
+#f_message,
+#e_message,
+#message
+{
+    
+    display:none;
+    color: black;
+    position:relative;
+    width: 80%;
+    background-color:wheat;
+    border: solid  #00baff 1px;
+    border-radius: 25px;
+    margin-top: -45px;
+    margin-left: 425px;
+}
+#l_message h4,
+#f_message h4,
+#e_message h4,
+#message h4
+{
+    font-size: 13px;
+}
+#l_message p,
+#f_message p,
+#e_message p,
+#message p
+{
+    margin-top: -15px;
+    padding: 10px 35px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.valid
+{
+    color: green;
+}
+
+.valid:before
+{
+    position: relative;
+    left: -35px;
+}
+
+.invalid
+{
+    color:#f7444e;
+}
+
+.invalid:before
+{
+    position: relative;
+    left: -35px;
+}
+
+.gender
+{
+    font-size: 23px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    letter-spacing: 2px;
+
+}
+
+
+.terms
+{
+    font-size: 13px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid  #00baff;
+    border-radius: 20px;
+}
+
+.login input[type="submit"]
+{
+    height: 40px;
+    width: 75%;
+    background:white;
+    border: 1px solid  #00baff;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+.login input[type="submit"]:hover{
+    background:black;
+    color: white;
+}
+
+.Sign_In
+{
+    color:black;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: -40px;
+}
+
+.Sign_In a
+{
+    color:#00baff;
+    text-decoration: none;
+}
+
+.Sign_In a:hover
+{
+    text-decoration: underline;
+}
+
+
+
+:root
+{
+    --white: #f0f0f0;
+    --black: #202a32;
+    --bg: var(--white);
+    --txt: var(--black);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mode
+{
+    background-color: var(--bg);
+    min-height: 100vh;
+    transition: background 0.9s ease;
+}
+
+.c_box
+{
+    display: none;
+}
+
+.l_label
+{
+    display: flex;
+    background: var(--txt);
+    border-radius: 5rem;
+    height: 1.5rem;
+    width: 3rem;
+}
+
+.l_label .ball
+{
+    position: absolute;
+    background-color: var(--bg);
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    height: 1rem;
+    width: 1rem;
+    transition: transform 0.9s ease
+}
+.navbar{
+    margin-top: 1.5%;
+    margin-left: 8%;
+}

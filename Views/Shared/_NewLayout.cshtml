@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+
+        @RenderBody()
+    </div>
+    <!-- jQery -->
+      <script src="~/js/jquery-3.4.1.min.js"></script>
+      <!-- popper js -->
+      <script src="~/js/popper.min.js"></script>
+      <!-- bootstrap js -->
+      <script src="~/js/bootstrap.js"></script>
+
+      <!-- product js -->
+      <script src="~/product.js"></script>
+      <script src="~/./home.js"></script>
+     @await RenderSectionAsync("Scripts", required: false) 
+
+</body>
+</html>
